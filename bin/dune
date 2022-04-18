@@ -1,0 +1,4 @@
+(executable
+ (public_name zero2prod)
+ (name main)
+ (libraries zero2prod dream))

@@ -1,0 +1,4 @@
+(test
+ (name zero2prod)
+ (libraries dream alcotest lwt alcotest-lwt zero2prod cohttp-lwt-unix)
+ (preprocess (pps lwt_ppx)))
