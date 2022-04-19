@@ -65,6 +65,7 @@ depends: [
   "graphql" {= "0.13.0"}
   "graphql-lwt" {= "0.13.0"}
   "graphql_parser" {= "0.13.0"}
+  "hex" {= "1.5.0" & with-test}
   "hmap" {= "0.8.1"}
   "ipaddr" {= "5.3.0" & with-test}
   "ipaddr-sexp" {= "5.3.0" & with-test}
@@ -100,9 +101,15 @@ depends: [
   "ocamlbuild" {= "0.14.1"}
   "ocamlfind" {= "1.9.3"}
   "ocplib-endian" {= "1.2"}
+  "omigrate" {= "0.1.1" & with-test}
   "parsexp" {= "v0.15.0" & with-test}
   "pbkdf" {= "1.2.0" & with-test}
   "pecu" {= "0.6"}
+  "pgx" {= "2.0" & with-test}
+  "pgx_lwt" {= "2.0" & with-test}
+  "pgx_lwt_unix" {= "2.0" & with-test}
+  "ppx_compare" {= "v0.15.0" & with-test}
+  "ppx_custom_printf" {= "v0.15.0" & with-test}
   "ppx_derivers" {= "1.2.1"}
   "ppx_sexp_conv" {= "v0.15.1" & with-test}
   "ppxlib" {= "0.26.0"}
@@ -123,6 +130,7 @@ depends: [
   "unstrctrd" {= "0.3"}
   "uri" {= "4.2.0"}
   "uri-sexp" {= "4.2.0" & with-test}
+  "uuidm" {= "0.9.8" & with-test}
   "uutf" {= "1.0.3"}
   "x509" {= "0.16.0" & with-test}
   "yojson" {= "1.7.0"}
