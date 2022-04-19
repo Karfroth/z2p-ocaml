@@ -30,10 +30,10 @@ if ! [ -x "$(command -v psql)" ]; then
   exit 1
 fi
 
-if ! [ -x "$(command -v sqlx)" ]; then
-  echo >&2 "Error: sqlx is not installed."
+if ! [ -x "$(command -v omigrate)" ]; then
+  echo >&2 "Error: omigrate is not installed."
   echo >&2 "Use:"
-  echo >&2 "    cargo install --version=0.5.5 sqlx-cli --no-default-features --features postgres"
+  echo >&2 "    opam install omigrate"
   echo >&2 "to install it."
   exit 1
 fi
@@ -67,7 +67,7 @@ then
       -p "${DB_PORT}":5432 \
       -d \
       --name "postgres_$(date '+%s')" \
-      postgres -N 1000
+      postgres:13.6-alpine3.15 -N 1000
       # ^ Increased maximum number of connections for testing purposes
 fi
 
@@ -79,8 +79,7 @@ done
 
 >&2 echo "Postgres is up and running on port ${DB_PORT} - running migrations now!"
 
-export DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_NAME}
-sqlx database create
-sqlx migrate run
+DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_NAME}
+omigrate setup --database="$DATABASE_URL" --source="migrations"
 
 >&2 echo "Postgres has been migrated, ready to go!"
