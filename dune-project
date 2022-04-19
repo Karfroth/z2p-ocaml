@@ -28,6 +28,7 @@
   (alcotest-lwt :with-test)
   (cohttp :with-test)
   (cohttp-lwt-unix :with-test)
+  (omigrate :with-test)
   )
  (tags
   (topics "to describe" your project)))
