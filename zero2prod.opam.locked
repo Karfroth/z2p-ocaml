@@ -12,7 +12,9 @@ doc: "https://url/to/documentation"
 bug-reports: "https://github.com/username/reponame/issues"
 depends: [
   "alcotest" {= "1.5.0" & with-test}
+  "alcotest-lwt" {= "1.5.0" & with-test}
   "angstrom" {= "0.15.0"}
+  "asn1-combinators" {= "0.2.6" & with-test}
   "astring" {= "0.8.5" & with-test}
   "base" {= "v0.15.0" & with-test}
   "base-bigarray" {= "base"}
@@ -24,11 +26,20 @@ depends: [
   "bigarray-overlap" {= "0.2.1"}
   "bigstringaf" {= "0.9.0"}
   "biniou" {= "1.2.1"}
+  "bos" {= "0.2.1" & with-test}
+  "ca-certs" {= "0.2.2" & with-test}
   "camlp-streams" {= "5.0"}
   "caqti" {= "1.8.0"}
   "caqti-lwt" {= "1.8.0"}
   "cmdliner" {= "1.1.1"}
   "cohttp" {= "5.0.0" & with-test}
+  "cohttp-lwt" {= "5.0.0" & with-test}
+  "cohttp-lwt-unix" {= "5.0.0" & with-test}
+  "conduit" {= "5.1.0" & with-test}
+  "conduit-lwt" {= "5.1.0" & with-test}
+  "conduit-lwt-unix" {= "5.1.0" & with-test}
+  "conf-gmp" {= "4" & with-test}
+  "conf-gmp-powm-sec" {= "3" & with-test}
   "conf-libev" {= "4-12"}
   "conf-libssl" {= "3"}
   "conf-pkg-config" {= "2"}
@@ -36,6 +47,7 @@ depends: [
   "csexp" {= "1.5.1"}
   "cstruct" {= "6.1.0"}
   "digestif" {= "1.1.2"}
+  "domain-name" {= "0.4.0" & with-test}
   "dream" {= "1.0.0~alpha4"}
   "dream-httpaf" {= "1.0.0~alpha1"}
   "dream-pure" {= "1.0.0~alpha2"}
@@ -48,27 +60,37 @@ depends: [
   "faraday-lwt" {= "0.8.1"}
   "faraday-lwt-unix" {= "0.8.1"}
   "fmt" {= "0.9.0"}
+  "fpath" {= "0.7.3" & with-test}
+  "gmap" {= "0.3.0" & with-test}
   "graphql" {= "0.13.0"}
   "graphql-lwt" {= "0.13.0"}
   "graphql_parser" {= "0.13.0"}
   "hmap" {= "0.8.1"}
+  "ipaddr" {= "5.3.0" & with-test}
+  "ipaddr-sexp" {= "5.3.0" & with-test}
   "jsonm" {= "1.0.1" & with-test}
   "ke" {= "0.6"}
   "logs" {= "0.7.0"}
   "lwt" {= "5.5.0"}
   "lwt_ppx" {= "2.0.3"}
   "lwt_ssl" {= "1.1.3"}
+  "macaddr" {= "5.3.0" & with-test}
   "magic-mime" {= "1.2.0"}
   "menhir" {= "20220210"}
   "menhirLib" {= "20220210"}
   "menhirSdk" {= "20220210"}
   "mirage-clock" {= "4.2.0"}
   "mirage-crypto" {= "0.10.6"}
+  "mirage-crypto-ec" {= "0.10.6" & with-test}
+  "mirage-crypto-pk" {= "0.10.6" & with-test}
   "mirage-crypto-rng" {= "0.10.6"}
+  "mirage-no-solo5" {= "1" & with-test}
+  "mirage-no-xen" {= "1" & with-test}
   "mmap" {= "1.2.0"}
   "mtime" {= "1.4.0"}
   "multipart_form" {= "0.4.1"}
   "multipart_form-lwt" {= "0.4.1"}
+  "num" {= "1.4" & with-test}
   "ocaml" {= "4.14.0"}
   "ocaml-base-compiler" {= "4.14.0"}
   "ocaml-compiler-libs" {= "v0.12.4"}
@@ -78,6 +100,8 @@ depends: [
   "ocamlbuild" {= "0.14.1"}
   "ocamlfind" {= "1.9.3"}
   "ocplib-endian" {= "1.2"}
+  "parsexp" {= "v0.15.0" & with-test}
+  "pbkdf" {= "1.2.0" & with-test}
   "pecu" {= "0.6"}
   "ppx_derivers" {= "1.2.1"}
   "ppx_sexp_conv" {= "v0.15.1" & with-test}
@@ -89,6 +113,7 @@ depends: [
   "result" {= "1.5"}
   "rresult" {= "0.7.0"}
   "seq" {= "base"}
+  "sexplib" {= "v0.15.0" & with-test}
   "sexplib0" {= "v0.15.0"}
   "ssl" {= "0.5.10"}
   "stdlib-shims" {= "0.3.0"}
@@ -99,7 +124,9 @@ depends: [
   "uri" {= "4.2.0"}
   "uri-sexp" {= "4.2.0" & with-test}
   "uutf" {= "1.0.3"}
+  "x509" {= "0.16.0" & with-test}
   "yojson" {= "1.7.0"}
+  "zarith" {= "1.12" & with-test}
 ]
 build: [
   ["dune" "subst"] {dev}
