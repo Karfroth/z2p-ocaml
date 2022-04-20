@@ -11,6 +11,8 @@ doc: "https://url/to/documentation"
 bug-reports: "https://github.com/username/reponame/issues"
 depends: [
   "ocaml"
+  "caqti-lwt"
+  "caqti-driver-postgresql"
   "dune" {>= "3.0"}
   "dream" {= "1.0.0~alpha4"}
   "lwt"

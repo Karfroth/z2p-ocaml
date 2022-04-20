@@ -21,6 +21,8 @@
  (description "A longer description")
  (depends
   ocaml
+  caqti-lwt
+  caqti-driver-postgresql
   dune
   (dream (= "1.0.0~alpha4"))
   lwt
