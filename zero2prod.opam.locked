@@ -30,6 +30,7 @@ depends: [
   "ca-certs" {= "0.2.2" & with-test}
   "camlp-streams" {= "5.0"}
   "caqti" {= "1.8.0"}
+  "caqti-driver-postgresql" {= "1.8.0"}
   "caqti-lwt" {= "1.8.0"}
   "cmdliner" {= "1.1.1"}
   "cohttp" {= "5.0.0" & with-test}
@@ -43,6 +44,7 @@ depends: [
   "conf-libev" {= "4-12"}
   "conf-libssl" {= "3"}
   "conf-pkg-config" {= "2"}
+  "conf-postgresql" {= "1"}
   "cppo" {= "1.6.8"}
   "csexp" {= "1.5.1"}
   "cstruct" {= "6.1.0"}
@@ -108,6 +110,7 @@ depends: [
   "pgx" {= "2.0" & with-test}
   "pgx_lwt" {= "2.0" & with-test}
   "pgx_lwt_unix" {= "2.0" & with-test}
+  "postgresql" {= "5.0.0"}
   "ppx_compare" {= "v0.15.0" & with-test}
   "ppx_custom_printf" {= "v0.15.0" & with-test}
   "ppx_derivers" {= "1.2.1"}
